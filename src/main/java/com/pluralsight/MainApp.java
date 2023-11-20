@@ -16,8 +16,15 @@ public class MainApp
         System.out.println("[0] Exit");
 
 
+        System.out.println("What is the shape?");
 
+        System.out.println("What is the the radius?");
 
+        System.out.println("What is the border width?");
+
+        System.out.println("What is the border color?");
+
+        System.out.println("What is x, y?");
 
 
 //        // This starter code to get you familiar with how
