@@ -2,6 +2,7 @@ package com.pluralsight;
 
 import com.pluralsight.forms.Turtle;
 
+import java.awt.*;
 import java.awt.geom.Point2D;
 
 public class Square extends Shape {
@@ -24,8 +25,9 @@ public class Square extends Shape {
     @Override
     public void paint() {
 
-
-
+        turtle.penDown();
+        turtle.setPenWidth(border);
+        super.setColor(color);
 
           getTurtle().forward(getSideLength());
           getTurtle().turnRight(90);

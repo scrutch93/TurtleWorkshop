@@ -2,6 +2,7 @@ package com.pluralsight;
 
 import com.pluralsight.forms.Turtle;
 
+import java.awt.*;
 import java.awt.geom.Point2D;
 
 public abstract class Shape implements Paint {
@@ -38,11 +39,25 @@ public abstract class Shape implements Paint {
    }
 
    public String getColor() {
-      return color;
+
+
+
+      return this.color;
    }
 
    public void setColor(String color) {
-      this.color = color;
+
+      if (color == "red"){
+         turtle.setColor(Color.RED);
+      }else if (color == "blue") {
+         turtle.setColor(Color.BLUE);
+      }else if (color == "green"){
+         turtle.setColor(Color.GREEN);
+      }else if (color == "yellow"){
+         turtle.setColor(Color.YELLOW);
+      }
+
+      //this.color = color;
    }
 
    public int getBorder() {

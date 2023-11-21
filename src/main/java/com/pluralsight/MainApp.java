@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 public class MainApp
 {
+
     public static void main(String[] args) {
 //        Scanner keyboard = new Scanner(System.in);
 //
@@ -69,7 +70,7 @@ public class MainApp
         Scanner keyboard = new Scanner(System.in);
 
         System.out.println("How long is a side?");
-        int side = keyboard.nextInt();
+        double side = keyboard.nextDouble();
         System.out.println("What is the border width?");
         int width = keyboard.nextInt();
         System.out.println("What is the border color?");
