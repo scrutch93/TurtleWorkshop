@@ -7,59 +7,54 @@ import java.util.Scanner;
 
 public class MainApp
 {
+    static World world = new World(200, 200);
 
     public static void main(String[] args) {
-//        Scanner keyboard = new Scanner(System.in);
-//
-//
-//        System.out.println("Welcome.");
-//        System.out.println("Select an option: ");
-//        System.out.println("[1] Add a shape");
-//        System.out.println("[2] Save Image");
-//        System.out.println("[0] Exit");
-//        int selection = keyboard.nextInt();
-//
-//        switch (selection) {
-//            case 1:
-//                addShape();
-//            case 2:
-//
-//            case 0:
-//        }
-        World world = new World(200, 200);
+        Scanner keyboard = new Scanner(System.in);
+
+
+        System.out.println("Welcome.");
+        System.out.println("Select an option: ");
+        System.out.println("[1] Add a shape");
+        System.out.println("[2] Save Image");
+        System.out.println("[0] Exit");
+        int selection = keyboard.nextInt();
+
+        switch (selection) {
+            case 1:
+                addShape(world);
+            case 2:
+
+            case 0:
+        }
 
 
         makeCircle(world);
 
     }
 
-        public static void addShape(){
+        public static void addShape(World world){
             Scanner keyboard = new Scanner(System.in);
-
-
 
             System.out.println("What is the shape you would like to create?");
             String response = keyboard.nextLine().trim().toLowerCase();
 
             switch (response) {
                 case "square":
-
-                case "triangle":
-
-                case "hexagon":
-
+                        makeSquare(world);
+                        break;
                 case "circle":
+                        makeCircle(world);
+                        break;
+                case "triangle":
+                        makeTriangle(world);
+                        break;
+                case "hexagon":
+                        makeHexagon(world);
 
             }
 
 
-            System.out.println("What is the the radius?");
-
-            System.out.println("What is the border width?");
-
-            System.out.println("What is the border color?");
-
-            System.out.println("What is x, y?");
 
     }
 
@@ -114,7 +109,7 @@ public class MainApp
     }
 
 
-    public static void makeTriangle() {
+    public static void makeTriangle(World world) {
         Scanner keyboard = new Scanner(System.in);
 
         System.out.println("What is the border width?");
@@ -128,7 +123,7 @@ public class MainApp
 
 
 
-    public static void makeHexagon() {
+    public static void makeHexagon(World world) {
         Scanner keyboard = new Scanner(System.in);
 
 
