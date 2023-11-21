@@ -29,7 +29,7 @@ public class MainApp
         World world = new World(200, 200);
 
 
-        makeSquare(world);
+        makeCircle(world);
 
     }
 
@@ -85,24 +85,32 @@ public class MainApp
         Turtle turtle = new Turtle(world, x, y);
         Square square = new Square(turtle,color,width,x,y,side);
 
-
         square.paint();
 
     }
 
 
-    public static void makeCircle() {
+    public static void makeCircle(World world) {
         Scanner keyboard = new Scanner(System.in);
 
-
-
         System.out.println("What is the the radius?");
+        double radius = keyboard.nextDouble();
 
         System.out.println("What is the border width?");
-
+        int width = keyboard.nextInt();
         System.out.println("What is the border color?");
+        String color = keyboard.next();
+        System.out.println("What is location (x, y)?");
+        System.out.println("Enter x coordinate: ");
+        int x = keyboard.nextInt();
+        System.out.println("Enter y coordinate: ");
+        int y = keyboard.nextInt();
 
-        System.out.println("What is x, y?");
+        Turtle turtle = new Turtle(world, x, y);
+        Circle circle = new Circle(turtle,color,width,x,y,radius);
+
+
+        circle.paint();
     }
 
 
