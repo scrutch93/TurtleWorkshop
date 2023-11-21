@@ -8,23 +8,27 @@ import java.util.Scanner;
 public class MainApp
 {
     public static void main(String[] args) {
-        Scanner keyboard = new Scanner(System.in);
+//        Scanner keyboard = new Scanner(System.in);
+//
+//
+//        System.out.println("Welcome.");
+//        System.out.println("Select an option: ");
+//        System.out.println("[1] Add a shape");
+//        System.out.println("[2] Save Image");
+//        System.out.println("[0] Exit");
+//        int selection = keyboard.nextInt();
+//
+//        switch (selection) {
+//            case 1:
+//                addShape();
+//            case 2:
+//
+//            case 0:
+//        }
+        World world = new World(200, 200);
 
 
-        System.out.println("Welcome.");
-        System.out.println("Select an option: ");
-        System.out.println("[1] Add a shape");
-        System.out.println("[2] Save Image");
-        System.out.println("[0] Exit");
-        int selection = keyboard.nextInt();
-
-        switch (selection) {
-            case 1:
-                addShape();
-            case 2:
-
-            case 0:
-        }
+        makeSquare(world);
 
     }
 
@@ -59,17 +63,37 @@ public class MainApp
     }
 
 
-    public static void makeSquare() {
+    public static void makeSquare(World world) {
+
+
+        Scanner keyboard = new Scanner(System.in);
+
+        System.out.println("How long is a side?");
+        int side = keyboard.nextInt();
         System.out.println("What is the border width?");
-
+        int width = keyboard.nextInt();
         System.out.println("What is the border color?");
+        String color = keyboard.next();
+        System.out.println("What is location (x, y)?");
+        System.out.println("Enter x coordinate: ");
+        int x = keyboard.nextInt();
+        System.out.println("Enter y coordinate: ");
+        int y = keyboard.nextInt();
 
-        System.out.println("What is x, y?");
+
+        Turtle turtle = new Turtle(world, x, y);
+        Square square = new Square(turtle,color,width,x,y,side);
+
+
+        square.paint();
 
     }
 
 
     public static void makeCircle() {
+        Scanner keyboard = new Scanner(System.in);
+
+
 
         System.out.println("What is the the radius?");
 
@@ -82,6 +106,7 @@ public class MainApp
 
 
     public static void makeTriangle() {
+        Scanner keyboard = new Scanner(System.in);
 
         System.out.println("What is the border width?");
 
@@ -95,6 +120,8 @@ public class MainApp
 
 
     public static void makeHexagon() {
+        Scanner keyboard = new Scanner(System.in);
+
 
         System.out.println("What is the border width?");
 
@@ -140,4 +167,4 @@ public class MainApp
 //        turtle.penDown();
 //        turtle.forward(hypotenuse);
     }
-}
+

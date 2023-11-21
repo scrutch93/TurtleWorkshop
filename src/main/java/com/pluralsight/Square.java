@@ -8,7 +8,7 @@ public class Square extends Shape {
 
     private double sideLength;
 
-    public Square(Turtle turtle, String color, int border, double x, double y) {
+    public Square(Turtle turtle, String color, int border, double x, double y, double sideLength) {
         super(turtle, color, border, x, y);
         this.sideLength = sideLength;
     }
