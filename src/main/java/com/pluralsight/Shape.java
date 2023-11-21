@@ -47,17 +47,17 @@ public abstract class Shape implements Paint {
 
    public void setColor(String color) {
 
-      if (color == "red"){
+      if (color.equals("red")){
          turtle.setColor(Color.RED);
-      }else if (color == "blue") {
+      }else if (color.equals("blue")) {
          turtle.setColor(Color.BLUE);
-      }else if (color == "green"){
+      }else if (color.equals("green")){
          turtle.setColor(Color.GREEN);
-      }else if (color == "yellow"){
+      }else if (color.equals("yellow")){
          turtle.setColor(Color.YELLOW);
       }
 
-      //this.color = color;
+      this.color = color;
    }
 
    public int getBorder() {
