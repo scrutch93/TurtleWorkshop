@@ -28,9 +28,6 @@ public class MainApp
             case 0:
         }
 
-
-        makeCircle(world);
-
     }
 
         public static void addShape(World world){
