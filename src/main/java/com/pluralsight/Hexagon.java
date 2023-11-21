@@ -3,8 +3,10 @@ package com.pluralsight;
 import com.pluralsight.forms.Turtle;
 
 public class Hexagon extends Shape {
-    public Hexagon(Turtle turtle, String location, String color, int border) {
-        super(turtle, location, color, border);
+
+
+    public Hexagon(Turtle turtle, String color, int border, double x, double y) {
+        super(turtle, color, border, x, y);
     }
 
     @Override

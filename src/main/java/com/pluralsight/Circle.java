@@ -6,9 +6,11 @@ public class Circle extends Shape{
 
     private int radius;
 
-    public Circle(Turtle turtle, String location, String color, int border) {
-        super(turtle, location, color, border);
+    public Circle(Turtle turtle, String color, int border, double x, double y) {
+        super(turtle, color, border, x, y);
+        this.radius = radius;
     }
+
 
     @Override
     public void paint() {
